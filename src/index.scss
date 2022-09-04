@@ -1,0 +1,101 @@
+@font-face {
+  font-family: "Gotham-Medium";
+  src: url(./assets/fonts/GothamMedium.ttf);
+}
+
+@font-face {
+  font-family: "Gotham-Book";
+  src: url(./assets/fonts/GothamBook.ttf);
+}
+
+$primary-text: #171a20;
+$primary-btn:rgba(23, 26, 32, 0.8);
+$secondary-btn: rgba(244, 244, 244);
+
+html, * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Gotham-Book', sans-serif;
+  color: $primary-text;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-text;
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $secondary-btn;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $primary-btn;
+  transition: all 250ms ease-in;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $primary-text;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+
+@media (min-width: 480px) {
+  .hide_on_desktop {
+      display: none;    
+  }
+}
+
+@media screen and (max-width: 768px){
+  ::-webkit-scrollbar {
+      -webkit-appearance: none;
+  }
+  ::-webkit-scrollbar {
+      width: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  
+  header {
+      .nav-logo {
+          padding-left: 16px;
+      }
+      #menu-btn {
+          background-color: rgba(0,0,0,0.07);
+      }
+  }
+  .hide_on_mobile {
+      display: none;
+  }
+  .btn-wrapper {
+      flex-direction: column;
+
+      .btn {
+          margin: 8px auto !important;
+          width: 90vw !important;
+      }
+  }
+}

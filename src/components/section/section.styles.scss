@@ -1,0 +1,97 @@
+@import '../../index.scss';
+
+main {
+    height: 100vh;
+    width: 100vw;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+
+    section {
+        scroll-snap-align: start;
+        height: 100%;
+        width: 100vw;
+        background-image: url('https://tesla-cdn.thron.com/delivery/public/image/tesla/03e533bf-8b1d-463f-9813-9a597aafb280/bvlatuR/std/4096x2560/M3-Homepage-Desktop-LHD');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        text-align: center;
+        padding: 30px;
+        position: relative;
+
+        .body-wrapper {
+            position: absolute;
+            top: 12vh;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+
+            .section-title {
+                font-size: 42px;
+                font-family: 'Gotham-Medium';
+                color: $primary-text;
+            }
+    
+            .section-subtitle {
+                font-size: 15px;
+                margin-top: 14px;
+    
+                a {
+                    color: $primary-text;
+                    position: relative;
+                    transition: height 250ms ease-in;
+    
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: -3px;
+                        left: 0;
+                        height: 1px;
+                        width: 100%;
+                        background-color: $primary-text;
+                        transition: height 250ms ease-in;
+                    }
+                    &:hover {
+                        &::after{
+                            height: 1.5px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .btn-wrapper {
+            position: absolute;
+            bottom: 10vh;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            .btn {
+                display: inline-block;
+                height: 40px;
+                width: 264px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: auto 12px;
+                border-radius: 4px;
+                font-family: 'Gotham-Book';
+                font-weight: bold;
+                font-size: 14px;
+
+                &:first-child {
+                    background-color: $primary-btn;
+                    color: $secondary-btn;
+                }
+
+                &:last-child {
+                    background-color: $secondary-btn;
+                    color: $primary-btn;
+                }
+            }
+        }
+    }
+}
