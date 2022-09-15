@@ -62,23 +62,13 @@ ul, ol {
 }
 
 
-@media (min-width: 480px) {
+@media (min-width: 1200px) {
   .hide_on_desktop {
       display: none;    
   }
 }
 
-@media screen and (max-width: 768px){
-  ::-webkit-scrollbar {
-      -webkit-appearance: none;
-  }
-  ::-webkit-scrollbar {
-      width: 4px;
-  }
-}
-
-@media (max-width: 480px) {
-  
+@media (max-width: 1220px) {
   header {
       .nav-logo {
           padding-left: 16px;
@@ -97,5 +87,14 @@ ul, ol {
           margin: 8px auto !important;
           width: 90vw !important;
       }
+  }
+}
+
+@media screen and (max-width: 768px){
+  ::-webkit-scrollbar {
+      -webkit-appearance: none;
+  }
+  ::-webkit-scrollbar {
+      width: 4px;
   }
 }
