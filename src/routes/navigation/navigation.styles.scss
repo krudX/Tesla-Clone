@@ -24,9 +24,20 @@ header {
             height: 100%;
         }
     }
+
+    .nav-menu {
+        flex: 2;
+
+        .menu-items {
+            justify-content: center;
+        }
+    }
+
+    .other-menu {
+        flex: 1;
+    }
   
     .nav-menu, .other-menu {
-        flex: 1;
         text-align: right;
         .menu-items {
             display: flex;
